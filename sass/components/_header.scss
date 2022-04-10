@@ -1,0 +1,110 @@
+.header{
+    border-bottom: 1px solid #ECECEC;
+}
+.logo{
+    display: inline-block;
+    margin-right: 93px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--main-text-color);
+
+        &--first-logo-part{
+            font-weight: 400;
+            color: var(--logo-first-part-color);
+    }
+}
+
+.header-nav{
+    font-weight: 500;
+    padding-left: 0;
+    margin: 0;
+
+
+        &__link{
+            position: relative;
+            color: var(--main-text-color); 
+            align-items: center;
+            display: inline-flex;
+            padding-bottom: 32px;
+            padding-top: 32px;
+            transition: color var(--animation-options), fill var(--animation-options); 
+            fill: var(--p-color);
+        }
+            
+        &__link--is-active{
+            color: var(--main-link-color-active); 
+             }
+
+        &__link--is-active::after{
+            content: "";
+            display: block;
+            background-color: rgb(33, 150, 243);
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+            position: absolute;
+            bottom: 0;
+            transition: background-color var(--animation-options);
+            }
+
+        &__link:hover, 
+        &__link:focus,
+        &__link:active{
+            color: var(--main-link-color-active);
+            fill: var(--main-link-color-active); 
+            }
+
+        &__link--is-active{
+            color: var(--main-link-color-active); 
+            }
+        
+        &__item:not(:last-child){
+            margin-right: 50px;
+            }
+ }
+
+.main-contacts{
+    margin: 0 0 0 auto; 
+    font-weight: 500;
+    padding-left: 0;
+
+        &__link{
+            position: relative;
+            color: var(--main-text-color); 
+            display: inline-flex;
+            align-items: center;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            fill: var(--p-color);
+            transition: color var(--animation-options), fill var(--animation-options); 
+            color: var(--p-color);
+        }
+        
+        &__icon{
+            margin-right: 10px;
+        }
+        
+        &__icon--email{
+             height: 12px;
+             width: 16px;
+         }
+        
+        &__icon--phone{
+            height: 16px;
+            width: 10px;
+         }
+
+        
+        &__link:hover,
+        &__link:focus,
+        &__link:active{
+            color: var(--main-link-color-active);
+            fill: var(--main-link-color-active); 
+          }
+
+        &__item:not(:last-child){
+            margin-right: 50px;
+          }
+   
+}
